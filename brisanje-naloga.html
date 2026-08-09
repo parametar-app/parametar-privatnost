@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brisanje naloga i podataka — Parametar</title>
+<style>
+  :root{
+    --teal:#0E5A50;
+    --tekst:#1C1F1E;
+    --sivo:#5A6462;
+    --linija:#DCE3E1;
+    --pozadina:#F7F9F8;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--pozadina);
+    color:var(--tekst);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .traka{
+    background:var(--teal);
+    color:#fff;
+    padding:28px 24px;
+  }
+  .traka .omot{max-width:760px;margin:0 auto}
+  .traka .ime{
+    font-size:15px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    opacity:.75;
+    margin:0 0 6px;
+  }
+  .traka h1{
+    margin:0;
+    font-size:29px;
+    line-height:1.2;
+    font-weight:600;
+  }
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding:36px 24px 80px;
+  }
+  .datum{
+    color:var(--sivo);
+    font-size:15px;
+    margin:0 0 32px;
+    padding-bottom:24px;
+    border-bottom:1px solid var(--linija);
+  }
+  h2{
+    font-size:20px;
+    font-weight:600;
+    margin:40px 0 12px;
+    padding-top:4px;
+  }
+  h3{
+    font-size:17px;
+    font-weight:600;
+    margin:26px 0 8px;
+  }
+  p{margin:0 0 14px}
+  ul{margin:0 0 16px;padding-left:22px}
+  ol{margin:0 0 16px;padding-left:22px}
+  li{margin-bottom:7px}
+  a{color:var(--teal);text-decoration:underline}
+  .istaknuto{
+    background:#fff;
+    border-left:3px solid var(--teal);
+    border-radius:0 8px 8px 0;
+    padding:16px 18px;
+    margin:20px 0;
+  }
+  .istaknuto p:last-child{margin-bottom:0}
+  .koraci{
+    background:#fff;
+    border:1px solid var(--linija);
+    border-radius:10px;
+    padding:20px 22px 20px 18px;
+    margin:20px 0;
+  }
+  .koraci ol{margin:0;padding-left:24px}
+  .koraci li{margin-bottom:10px}
+  .koraci li:last-child{margin-bottom:0}
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0 20px;
+    background:#fff;
+    border:1px solid var(--linija);
+    border-radius:10px;
+    overflow:hidden;
+    font-size:16px;
+  }
+  th,td{
+    text-align:left;
+    padding:12px 14px;
+    border-bottom:1px solid var(--linija);
+    vertical-align:top;
+  }
+  th{background:#EEF3F1;font-weight:600}
+  tr:last-child td{border-bottom:none}
+  .podnozje{
+    margin-top:56px;
+    padding-top:24px;
+    border-top:1px solid var(--linija);
+    color:var(--sivo);
+    font-size:15px;
+  }
+  @media (max-width:600px){
+    body{font-size:16px}
+    .traka h1{font-size:24px}
+    h2{font-size:19px}
+    table{font-size:15px}
+    th,td{padding:10px}
+  }
+</style>
+</head>
+<body>
+
+<div class="traka">
+  <div class="omot">
+    <p class="ime">Parametar — kućni budžet</p>
+    <h1>Brisanje naloga i podataka</h1>
+  </div>
+</div>
+
+<main>
+
+<p class="datum">Poslednja izmena: 9. avgust 2026.</p>
+
+<p>Ova stranica objašnjava kako korisnik aplikacije <strong>Parametar — kućni budžet</strong> (izdavač: Marko Ristic) može da obriše svoj nalog i podatke koje je aplikacija sačuvala.</p>
+
+<div class="istaknuto">
+  <p><strong>Ukratko:</strong> brisanje se pokreće iz same aplikacije, u odeljku Podešavanja. Nije potrebno da nam pišete ni da čekate odgovor — brisanje je trenutno i konačno.</p>
+</div>
+
+<h2>Dve mogućnosti</h2>
+<p>U aplikaciji postoje dve odvojene radnje. Prva briše sadržaj a nalog ostaje, druga briše i nalog.</p>
+
+<h3>1. Brisanje svih podataka (nalog ostaje)</h3>
+<p>Briše sve što ste uneli, ali zadržava vaš nalog i mogućnost prijave. Korisno ako želite da počnete iz početka.</p>
+
+<div class="koraci">
+  <ol>
+    <li>Otvorite aplikaciju Parametar</li>
+    <li>Otvorite bočni meni i izaberite <strong>Podešavanja</strong></li>
+    <li>Na dnu spiska izaberite <strong>Obriši sve podatke</strong></li>
+    <li>Upišite reč <strong>OBRIŠI</strong> da biste potvrdili</li>
+  </ol>
+</div>
+
+<h3>2. Brisanje naloga</h3>
+<p>Briše nalog zajedno sa svim podacima. Posle ovoga se ne možete prijaviti istim nalogom i podaci se ne mogu vratiti.</p>
+
+<div class="koraci">
+  <ol>
+    <li>Otvorite aplikaciju Parametar</li>
+    <li>Otvorite bočni meni i izaberite <strong>Podešavanja</strong></li>
+    <li>Na dnu spiska izaberite <strong>Obriši nalog</strong></li>
+    <li>Upišite reč <strong>OBRIŠI</strong> da biste potvrdili</li>
+  </ol>
+</div>
+
+<p>Ako koristite aplikaciju bez naloga (anonimno), dostupna je samo prva mogućnost, jer naloga ni nema.</p>
+
+<h2>Šta se briše</h2>
+<p>Obe radnje trajno brišu sa naših servera sledeće podatke:</p>
+
+<table>
+  <tr>
+    <th>Podatak</th>
+    <th>Šta obuhvata</th>
+  </tr>
+  <tr>
+    <td>Računi</td>
+    <td>Svi skenirani i ručno uneti računi, sa iznosima, datumima, prodavnicama i kategorijama</td>
+  </tr>
+  <tr>
+    <td>Artikli</td>
+    <td>Pojedinačne stavke sa računa</td>
+  </tr>
+  <tr>
+    <td>Režije</td>
+    <td>Uplatnice i evidentirani troškovi domaćinstva iz Digitalnog sefa</td>
+  </tr>
+  <tr>
+    <td>Garancije</td>
+    <td>Evidentirane garancije i rokovi isteka</td>
+  </tr>
+  <tr>
+    <td>Projekti</td>
+    <td>Napravljeni projekti i njihove veze sa računima</td>
+  </tr>
+  <tr>
+    <td>Kategorije</td>
+    <td>Kategorije koje ste sami napravili</td>
+  </tr>
+  <tr>
+    <td>Razgovori sa asistentom</td>
+    <td>Sva pitanja koja ste postavili i odgovori koje ste dobili</td>
+  </tr>
+  <tr>
+    <td>Budžet</td>
+    <td>Postavljeni mesečni iznos</td>
+  </tr>
+  <tr>
+    <td>Poruke podršci</td>
+    <td>Sugestije i primedbe koje ste poslali kroz aplikaciju</td>
+  </tr>
+  <tr>
+    <td>Nalog</td>
+    <td>Adresa elektronske pošte i podaci za prijavu (samo kod brisanja naloga)</td>
+  </tr>
+</table>
+
+<p>Podaci se brišu odmah po potvrdi i <strong>ne mogu se vratiti</strong>. Ne čuvamo rezervne kopije vaših podataka posle brisanja i ne postoji period čekanja u kojem bi se nalog mogao povratiti.</p>
+
+<h2>Šta ostaje na vašem telefonu</h2>
+<p>Fotografije koje ste napravili kroz aplikaciju — dokazi o plaćenim režijama i slike računa — čuvaju se <strong>lokalno u galeriji vašeg telefona</strong>, u albumima „Digitalni sef“ i „Računi“. One nisu na našim serverima i brisanje naloga ih ne dira.</p>
+<p>Te fotografije brišete sami, kao i svaku drugu sliku u galeriji, ili uklanjanjem aplikacije zajedno sa njenim podacima.</p>
+
+<h2>Ako ne možete da pristupite aplikaciji</h2>
+<p>Ako ste izgubili pristup nalogu pa brisanje ne možete da pokrenete sami, pišite nam na <a href="mailto:parametar.app@gmail.com">parametar.app@gmail.com</a> sa adrese elektronske pošte kojom je nalog napravljen. Zahtev ćemo obraditi u razumnom roku, najkasnije u roku od 30 dana.</p>
+
+<h2>Više informacija</h2>
+<p>Detalji o tome koje podatke prikupljamo i zašto nalaze se u <a href="./">politici privatnosti</a>.</p>
+
+<div class="podnozje">
+  <p>Parametar · Marko Ristic · Republika Srbija · <a href="mailto:parametar.app@gmail.com">parametar.app@gmail.com</a></p>
+</div>
+
+</main>
+
+</body>
+</html>
