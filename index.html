@@ -101,7 +101,7 @@
 
 <main>
 
-<p class="datum">Poslednja izmena: 19. avgust 2026.</p>
+<p class="datum">Poslednja izmena: 25. avgust 2026.</p>
 
 <p>Parametar je aplikacija za praćenje kućnog budžeta. Skenira fiskalne račune i uplatnice, razvrstava troškove i pomaže vam da vidite gde odlazi novac. Ova politika objašnjava koje podatke aplikacija prikuplja, zašto, gde se čuvaju i šta vi možete da uradite sa njima.</p>
 
@@ -125,7 +125,7 @@
 <h3>Podaci o troškovima</h3>
 <ul>
   <li>Podaci sa fiskalnog računa koje portal Poreske uprave vraća kada skenirate QR kod: naziv i PIB prodavnice, adresa, datum i vreme, ukupan iznos, spisak artikala i broj računa</li>
-  <li>Kategorija koju ste dodelili računu, beleške koje ste sami upisali, pripadnost projektu</li>
+  <li>Kategorija koju ste dodelili računu, kategorije pojedinačnih artikala, beleške koje ste sami upisali, pripadnost projektu</li>
   <li>Podaci sa uplatnica za režije: primalac, iznos, poziv na broj, svrha uplate, period</li>
   <li>Garancije koje ste evidentirali</li>
   <li>Iznos budžeta ako ste ga postavili</li>
@@ -147,6 +147,7 @@
 <h2>3. Zašto prikupljamo te podatke</h2>
 <ul>
   <li>Da bismo vam prikazali vaše troškove, statistiku i poređenja po mesecima</li>
+  <li>Da bismo artikle sa računa svrstali u kategorije, kako bi statistika bila tačnija</li>
   <li>Da bi vaši računi ostali sačuvani ako promenite ili izgubite telefon</li>
   <li>Da bi asistent mogao da odgovori na pitanja o vašoj potrošnji</li>
   <li>Da bismo vas obavestili kada ističe garancija</li>
@@ -173,11 +174,17 @@
 <ul>
   <li>ukupan broj računa i period koji pokrivaju</li>
   <li>zbirove po kategorijama i po mesecima</li>
-  <li>pet najvećih pojedinačnih troškova, sa nazivom prodavnice, iznosom i datumom</li>
+  <li>pet najvećih pojedinačnih troškova, sa nazivom prodavnice, iznosom, datumom i kategorijom računa</li>
   <li>prodavnice u kojima ste najčešće trošili</li>
 </ul>
-<p>Ne šalju se: nazivi artikala, vaše ime, adresa elektronske pošte, oznaka naloga, niti istorija ranijih razgovora. Svako pitanje se šalje samostalno.</p>
-<p>Koristi se besplatni nivo usluge. Prema uslovima korišćenja, Google može koristiti poslati sadržaj za razvoj i unapređenje svojih usluga, i ljudski recenzenti ga mogu pregledati. Zato se šalje isključivo sažetak brojeva — bez vašeg imena, adrese elektronske pošte, oznake naloga i naziva artikala — pa se poslati sadržaj ne može povezati sa vama.</p>
+<p>Asistentu se ne šalju: nazivi artikala, vaše ime, adresa elektronske pošte, oznaka naloga, niti istorija ranijih razgovora. Svako pitanje se šalje samostalno.</p>
+<p>Koristi se besplatni nivo usluge. Prema uslovima korišćenja, Google može koristiti poslati sadržaj za razvoj i unapređenje svojih usluga, i ljudski recenzenti ga mogu pregledati. Zato se šalje isključivo sažetak brojeva — bez vašeg imena, adrese elektronske pošte i oznake naloga — pa se poslati sadržaj ne može povezati sa vama.</p>
+
+<h3>Google Gemini (razvrstavanje artikala)</h3>
+<p>Da bi svaki artikal sa računa dobio kategoriju (namirnice, kuća, zdravlje i slično), aplikacija prvo koristi sopstvenu bazu poznatih naziva. Za nazive koje ne prepoznaje, <strong>naziv artikla se šalje Gemini-ju</strong> da predloži kategoriju.</p>
+<p>Šalje se isključivo naziv artikla, onako kako piše na računu, prepisan latinicom. Ne šalju se cena, količina, naziv prodavnice, datum, vaše ime, adresa elektronske pošte ni oznaka naloga. Šalju se nazivi sa jednog računa, odmah po njegovom čuvanju, i to samo oni koje aplikacija ne prepoznaje — ako su svi artikli poznati, ne šalje se ništa.</p>
+<p>Dobijena kategorija se upisuje u zajedničku bazu naziva, pa se za isti artikal više ne pita. Što ta baza više raste, to se ređe pita.</p>
+<p>I ovde se koristi besplatni nivo usluge, pa Google može koristiti poslati sadržaj za unapređenje svojih usluga. Zato se šalje samo goli naziv artikla, bez ijednog podatka koji bi ga povezao sa vama.</p>
 
 <h3>Logo.dev</h3>
 <p>Da bi se uz račun prikazao logotip prodavnice, aplikacija toj usluzi šalje naziv internet domena prodavnice (na primer <em>maxi.rs</em>). Ne šalje se nijedan podatak o vama ni o iznosu računa. Kao i pri svakom otvaranju internet adrese, toj usluzi je vidljiva IP adresa sa koje je zahtev poslat.</p>
