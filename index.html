@@ -101,7 +101,7 @@
 
 <main>
 
-<p class="datum">Poslednja izmena: 20. septembar 2026.</p>
+<p class="datum">Poslednja izmena: 5. oktobar 2026.</p>
 
 <p>Parametar je aplikacija za praćenje kućnog budžeta. Skenira fiskalne račune i uplatnice, razvrstava troškove i pomaže vam da vidite gde odlazi novac. Ova politika objašnjava koje podatke aplikacija prikuplja, zašto, gde se čuvaju i šta vi možete da uradite sa njima.</p>
 
@@ -128,6 +128,7 @@
   <li>Kategorija koju ste dodelili računu, kategorije pojedinačnih artikala, beleške koje ste sami upisali, pripadnost projektu</li>
   <li>Podaci sa uplatnica za režije: primalac, iznos, poziv na broj, svrha uplate, period</li>
   <li>Garancije koje ste evidentirali</li>
+  <li>Pretplate koje ste evidentirali: naziv servisa, iznos i valuta, ciklus naplate, datum sledeće naplate, probni period ako postoji, kategorija, beleška i link za otkazivanje</li>
   <li>Iznos budžeta ako ste ga postavili</li>
   <li>Pitanja koja postavite asistentu i odgovori koje dobijete</li>
   <li>Tekst koji pošaljete kroz obrazac za sugestije i primedbe, zajedno sa verzijom aplikacije</li>
@@ -193,6 +194,15 @@
 <p>Dobijena kategorija se upisuje u zajedničku bazu naziva, pa se za isti artikal više ne pita. Što ta baza više raste, to se ređe pita.</p>
 <p>I ovde se koristi besplatni nivo usluge, pa Google može koristiti poslati sadržaj za unapređenje svojih usluga. Zato se šalje samo goli naziv artikla, bez ijednog podatka koji bi ga povezao sa vama.</p>
 
+<h3>Google Gemini (čitanje računa sa slike)</h3>
+<p>Kada QR kod ne može da se pročita, umesto ručnog kucanja možete uslikati donji deo računa. Ta fotografija se preko našeg servera šalje Gemini-ju, koji sa nje očitava podatke potrebne za proveru na portalu Poreske uprave: PFR broj računa, brojač računa, iznos, datum i vreme.</p>
+<p>Fotografija se <strong>nigde ne čuva</strong> — ni u bazi, ni u galeriji. Prolazi kroz server i odbacuje se čim se podaci očitaju.</p>
+<p>Ovu opciju pokrećete vi, svaki put posebno, i nije obavezna — ručni unos uvek ostaje.</p>
+<p>I ovde se koristi besplatni nivo usluge. Prema uslovima korišćenja, Google može koristiti poslatu fotografiju za razvoj i unapređenje svojih usluga, i ljudski recenzenti je mogu pregledati. Za razliku od golog naziva artikla, fotografija računa može da sadrži i podatke koje niste nameravali da pošaljete — naziv prodavnice, spisak kupljenih stvari i iznose. Zato slikajte isključivo donji deo računa, gde stoje podaci o fiskalizaciji.</p>
+
+<h3>Google Gemini (prepoznavanje prodavnice)</h3>
+<p>Da bi se prikazao logotip prodavnice koju aplikacija ne poznaje, njen naziv i PIB sa računa šalju se Gemini-ju da utvrdi o kom je brendu reč i koji mu je internet domen. Šalju se isključivo podaci o firmi, koji su javni — nijedan vaš podatak, ni iznos računa. Dobijeni odgovor se upisuje u zajedničku bazu, pa se za istu firmu više ne pita.</p>
+
 <h3>Logo.dev</h3>
 <p>Da bi se uz račun prikazao logotip prodavnice, aplikacija toj usluzi šalje naziv internet domena prodavnice (na primer <em>maxi.rs</em>). Ne šalje se nijedan podatak o vama ni o iznosu računa. Kao i pri svakom otvaranju internet adrese, toj usluzi je vidljiva IP adresa sa koje je zahtev poslat.</p>
 
@@ -221,6 +231,7 @@
   <li><strong>Kamera</strong> — isključivo za skeniranje QR koda sa računa i uplatnica i za fotografisanje dokaza o plaćanju. Snimci se ne šalju nikome bez vaše radnje.</li>
   <li><strong>Fotografije i mediji</strong> — da bi aplikacija mogla da sačuva sliku računa ili dokaza u galeriju telefona i da biste mogli da izaberete postojeću fotografiju.</li>
   <li><strong>Internet</strong> — za preuzimanje podataka o računu, čuvanje na nalogu i rad asistenta.</li>
+  <li><strong>Obaveštenja</strong> — da biste dobili podsetnik pre naplate pretplate i pre isteka garancije. Možete ih isključiti u podešavanjima telefona.</li>
 </ul>
 
 <h2>8. Koliko dugo čuvamo podatke</h2>
